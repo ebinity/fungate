@@ -66,7 +66,7 @@
                     <div id="notificationsPlacer">
                                 <button class="ohjeetPopupCloseButton" onClick='startGame()'>X</button>
                             <img src="Graphics/gameArea/misc/spaceHelmet.png" class="factSpaceHelmet">
-                            <p class="startGameText">Do you want to get your license faster?</p>
+                            <p class="startGameText">Nice to meet you Admiral Caiden-Paul Suarez. <br> I heard that you are tired of waiting for your order. <br>Please take the rains and have fun!</p>
                         </div>
                     </div>
                 </div><!--NotificationsAreaEND -->
@@ -224,7 +224,7 @@
                     <div id="levelBarAmount"></div>
                 </div>
                 <div id="spaceRocketBoostBar">
-                    <p class="levelProgressText">Boosts:</p>
+                    <p class="levelProgressText">Automation power:</p>
                     <div id="spaceRocketBoostBarAmount"></div>
                 </div>
 
@@ -242,7 +242,7 @@
     
                 <div id="upgrades" >
                     <div id="upgrade1" onClick="buyEnergiaSieppari()"  onmouseover="hoverSound()">
-                        <p class="otsikko">Energiasieppari</p>
+                        <p class="otsikko">HMS "Automation" Titanship</p>
                             <div id="tooltip">
                                 <span class="tooltiptext">Paranna nykyistä rakettiasi, jotta keräät <br> kerralla enemmän energiaa!</span>
                             </div>
@@ -250,7 +250,7 @@
                         <p class="hinta upgrade1price">10</p>
                     </div>
                     <div id="upgrade2" onClick="buySpaceRocketBoost()"  onmouseover="hoverSound()">
-                        <p class="otsikko">Space Rocket Boost</p>
+                        <p class="otsikko">USS "Integration" Eagle</p>
                             <div id="tooltip">
                                 <span class="tooltiptext">Energiasieppari pörrää planeettojen ympärillä keräten automaattisesti energiaa.</span>
                             </div>
@@ -258,7 +258,7 @@
                         <p class="hinta upgrade2price">100</p>
                     </div>
                     <div id="upgrade3" onClick="buySpaceColony()"  onmouseover="hoverSound()">
-                        <p class="otsikko">Siirtokunta</p>
+                        <p class="otsikko">Space Colony</p>
                             <div id="tooltip">
                                 <span class="tooltiptext">Siirtokunnan avulla saat tuhansia uusia energiankerääjiä, 
                                     jotka keräävät energiaa automaattisesti.
@@ -291,7 +291,7 @@
 
                 </div><!--Upgrades END-->
                 
-                <button class="saveGame ohjeet" onClick="showHiddenDiv('ohjeetPopup')">Ohjeet</button>
+                <button class="saveGame ohjeet" onClick="showHiddenDiv('ohjeetPopup')">Help</button>
                 <br><br>
                 <button class="saveGame releaseNotes" onClick="showHiddenDiv('releaseNotes')">Release Notes</button>
 
@@ -303,23 +303,23 @@
                 <h2 class="TitleUpperCase">Stats</h2>
                 <div id="stats">
                     <div id="statsBar">
-                        <p class="statsTitle">Boosteja käytössä:</p>
-                        <p id="boostejaYhteensa">0</p>
-                    </div>
-                    <div id="statsBar">
-                        <p class="statsTitle">Energiasieppareita:</p>
+                        <p class="statsTitle">Automations:</p>
                         <p id="autoKlikkereitaYhteensa">0</p>
                     </div>
                     <div id="statsBar">
-                        <p class="statsTitle">Siirtokuntia rakennettu:</p>
+                        <p class="statsTitle">Integrations:</p>
+                        <p id="boostejaYhteensa">0</p>
+                    </div>
+                    <div id="statsBar">
+                        <p class="statsTitle">Colonies Built:</p>
                         <p id="totalColonnies">0</p>
                     </div>
                     <div id="statsBar">
-                        <p class="statsTitle">Kaikki kerätty energia:</p>
+                        <p class="statsTitle">Total energy gathered:</p>
                         <p id="totalEnergy">0</p>
                     </div>
                     <div id="statsBar">
-                        <p class="statsTitle">Kaikki todelliset klikit:</p>
+                        <p class="statsTitle">Total of all clicks:</p>
                         <p id="totalRealClicks">0</p>
                     </div>
 
@@ -372,8 +372,8 @@
                 </div>
 
             <div id="menuButtons">
-                <button class="saveGame" onClick="saveSession()" >Tallenna peli</button>
-                <button class="saveGame" onClick="loadSession()"  >Lataa</button>
+                <button class="saveGame" onClick="saveSession()" >Save Game</button>
+                <button class="saveGame" onClick="loadSession()"  >Load Game</button>
                 <br><br>
                 <button class="saveGame" onClick="stopPlayMusic()" id="audioPlayerControls" >Stop Music</button>
             </div>

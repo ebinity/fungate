@@ -90,7 +90,7 @@ function randomFacts() {
     
 }
 
-var listOfFacts = ['Space is completely silent!', 'In the observable universe there are an estimated 2 trillion (2,000,000,000,000) galaxies.', 'The International Space Station is the largest ever crewed object in space.', 'The universe is observed to be 13.8 billion years old and has been expanding since its formation in the Big Bang.', 'Space is a hard vacuum, meaning it is a void containing very little matter.', 'One million earths can fit in the sun.', 'There are more stars in the universe than grains of sand on earth.', "Gravity moves the same speed as light. So if sun suddenly disappeared, with it's light lasting for 8 minutes, it's gravity would last also 8 minutes."];
+var listOfFacts = ['The Firefox logo isn’t a fox… it’s a red panda!', 'One Petabyte (PB) = 1024 (TB). To put this in perspective, a 50PB hard drive could hold the entire written works of mankind from the beginning of recorded history in all languages.', 'In 1971, the first ever computer virus was developed. Named Creeper, it was made as an experiment just to see how it spread between computers. The virus simply displayed the message: I’m the creeper, catch me if you can!', 'Until 2010, carrier pigeons were faster than the internet.', 'NASA’s internet speed is 91 GB per second.', 'Over 6,000 new computer viruses are created and released every month. 90% of emails contain some form of malware!'];
 
 // TÄssä annetaan ylläolevan function kutsuma random fakta ja lopulta poistetaan se näkyvistä: HUOM!!! aseta poistuminen ennen kuin uusi tulee näkyvinin!
 function getRandomFact(){
@@ -283,19 +283,19 @@ function storyContinuer(choosedAnswer){
         case 'a':
                 vastaustenKirjaimet += "a";
                 var tilattavaDialogi = currentDialog + vastaustenKirjaimet;
-                alert(tilattavaDialogi);
+                //alert(tilattavaDialogi);
                 printStory(tilattavaDialogi)
                 break;
         case 'b':
                 vastaustenKirjaimet += "b";
                 var tilattavaDialogi = currentDialog + vastaustenKirjaimet;
-                alert(tilattavaDialogi);
+                //alert(tilattavaDialogi);
                 printStory(tilattavaDialogi)
                 break;
         case 'c':
                 vastaustenKirjaimet += "b";
                 var tilattavaDialogi = currentDialog + vastaustenKirjaimet;
-                alert(tilattavaDialogi);
+                //alert(tilattavaDialogi);
                 printStory(tilattavaDialogi)
                 break;
     }
@@ -517,7 +517,7 @@ function saveSession(){
     }
 
 
-    alert("tallennettu!")
+    alert("Saved!")
     window.localStorage.setItem('stats', JSON.stringify(playerStatsForSave))
 
 
@@ -621,7 +621,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
         document.getElementsByClassName('upgrade2price')[0].innerHTML = '200';
     } else if (currentEnergy >= 200 && rocketBoosts < 2){
@@ -629,7 +629,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
         document.getElementsByClassName('upgrade2price')[0].innerHTML = '300';
     } else if (currentEnergy >= 300 && rocketBoosts < 3){
@@ -637,7 +637,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
         document.getElementsByClassName('upgrade2price')[0].innerHTML = '400';
     } else if (currentEnergy >= 400 && rocketBoosts < 4){
@@ -645,7 +645,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
         document.getElementsByClassName('upgrade2price')[0].innerHTML = '500';
     } else if (currentEnergy >= 500 && rocketBoosts < 5){
@@ -653,7 +653,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
         document.getElementsByClassName('upgrade2price')[0].innerHTML = '600';
     } else if (currentEnergy >= 600 && rocketBoosts < 6){
@@ -661,7 +661,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
         document.getElementsByClassName('upgrade2price')[0].innerHTML = '700';
     } else if (currentEnergy >= 700 && rocketBoosts < 7){
@@ -669,7 +669,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
         document.getElementsByClassName('upgrade2price')[0].innerHTML = '800';
     } else if (currentEnergy >= 800 && rocketBoosts < 8){
@@ -677,7 +677,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
         document.getElementsByClassName('upgrade2price')[0].innerHTML = '900';
     } else if (currentEnergy >= 900 && rocketBoosts < 9){
@@ -685,7 +685,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
         document.getElementsByClassName('upgrade2price')[0].innerHTML = '1000';
     } else if (currentEnergy >= 1000 && rocketBoosts < 10){
@@ -693,7 +693,7 @@ function buySpaceRocketBoost(){
         currentEnergy = currentEnergy - 100;
         document.getElementById("currentEnergyNum").innerHTML = currentEnergy;
         document.getElementById("boostejaYhteensa").innerHTML = rocketBoosts;
-        alert("Saat nyt enemmän energiaa jokaisella klikillä!")
+        //alert("Saat nyt enemmän energiaa jokaisella klikillä!")
         updateRocketBoostBar(1);
     } else if (rocketBoosts === 10) {
             alert("You have the max amount of rocket boosts! Great work!")
@@ -747,7 +747,7 @@ function buyEnergiaSieppari(){
         function autoclicker(){
             autoClicker();
             energiaSieppari = energiaSieppari +1;
-            alert("Ostit uuden energiasiepparin! Hieno homma!");
+            //alert("Ostit uuden energiasiepparin! Hieno homma!");
         
             document.getElementById('gameArea').innerHTML += createLocation("energiaSieppari");
             document.getElementById("autoKlikkereitaYhteensa").innerHTML = energiaSieppari;
@@ -756,7 +756,7 @@ function buyEnergiaSieppari(){
 }
 
 function autoClicker() {
-      alert("Autoclicker päällä!")
+      //alert("Autoclicker päällä!")
       window.setInterval(
         function () {
 
@@ -786,7 +786,7 @@ function buySpaceColony(){
     if (currentEnergy >= 500 && siirtokunta < 1){
         document.getElementsByClassName('upgrade3price')[0].innerHTML = '1000';
         siirtokunta = siirtokunta +1;
-        alert("Ostit uuden siirtokunta! VAU!");
+        //alert("Ostit uuden siirtokunta! VAU!");
         //document.getElementById("siirtokunta1").src = "Graphics/gameArea/rockets/starmancer.gif";
         document.getElementById('gameArea').innerHTML += createLocation("spaceColony");
         document.getElementById('totalColonnies').innerHTML = siirtokunta;
@@ -795,7 +795,7 @@ function buySpaceColony(){
 
         document.getElementsByClassName('upgrade3price')[0].innerHTML = '1500';
         siirtokunta = siirtokunta +1;
-        alert("Ostit uuden siirtokunta! VAU!");
+        //alert("Ostit uuden siirtokunta! VAU!");
         //document.getElementById("siirtokunta1").src = "Graphics/gameArea/rockets/starmancer.gif";
         document.getElementById('gameArea').innerHTML += createLocation("spaceColony");
         document.getElementById('totalColonnies').innerHTML = siirtokunta;
@@ -804,7 +804,7 @@ function buySpaceColony(){
 
         document.getElementsByClassName('upgrade3price')[0].innerHTML = '2000';
         siirtokunta = siirtokunta +1;
-        alert("Ostit uuden siirtokunta! VAU!");
+        //alert("Ostit uuden siirtokunta! VAU!");
         //document.getElementById("siirtokunta1").src = "Graphics/gameArea/rockets/starmancer.gif";
         document.getElementById('gameArea').innerHTML += createLocation("spaceColony");
         document.getElementById('totalColonnies').innerHTML = siirtokunta;
@@ -813,7 +813,7 @@ function buySpaceColony(){
 
         document.getElementsByClassName('upgrade3price')[0].innerHTML = '2500';
         siirtokunta = siirtokunta +1;
-        alert("Ostit uuden siirtokunta! VAU!");
+        //alert("Ostit uuden siirtokunta! VAU!");
         //document.getElementById("siirtokunta1").src = "Graphics/gameArea/rockets/starmancer.gif";
         document.getElementById('gameArea').innerHTML += createLocation("spaceColony");
         document.getElementById('totalColonnies').innerHTML = siirtokunta;
@@ -822,7 +822,7 @@ function buySpaceColony(){
 
         document.getElementsByClassName('upgrade3price')[0].innerHTML = '3000';
         siirtokunta = siirtokunta +1;
-        alert("Ostit uuden siirtokunta! VAU!");
+        //alert("Ostit uuden siirtokunta! VAU!");
         //document.getElementById("siirtokunta1").src = "Graphics/gameArea/rockets/starmancer.gif";
         document.getElementById('gameArea').innerHTML += createLocation("spaceColony");
         document.getElementById('totalColonnies').innerHTML = siirtokunta;
@@ -831,7 +831,7 @@ function buySpaceColony(){
 
         document.getElementsByClassName('upgrade3price')[0].innerHTML = '3500';
         siirtokunta = siirtokunta +1;
-        alert("Ostit uuden siirtokunta! VAU!");
+        //alert("Ostit uuden siirtokunta! VAU!");
         //document.getElementById("siirtokunta1").src = "Graphics/gameArea/rockets/starmancer.gif";
         document.getElementById('gameArea').innerHTML += createLocation("spaceColony");
         document.getElementById('totalColonnies').innerHTML = siirtokunta;
@@ -840,7 +840,7 @@ function buySpaceColony(){
         
         document.getElementsByClassName('upgrade3price')[0].innerHTML = '4000';
         siirtokunta = siirtokunta +1;
-        alert("Ostit uuden siirtokunta! VAU!");
+        //alert("Ostit uuden siirtokunta! VAU!");
         //document.getElementById("siirtokunta1").src = "Graphics/gameArea/rockets/starmancer.gif";
         document.getElementById('gameArea').innerHTML += createLocation("spaceColony");
         document.getElementById('totalColonnies').innerHTML = siirtokunta;
@@ -916,7 +916,7 @@ function createLocation(nameOfOBject) {
             saveToArray = "energiaSieppari";
           break;
         default:
-            alert("Virheellinen tilaus!")
+            //alert("Virheellinen tilaus!")
       }
 
 
@@ -1098,7 +1098,7 @@ function editEconomyHealth(number) {
     economyHealthBarBarAmount = 100 - number;
 
     document.getElementById("economyHealthBarBarAmount").style.width = economyHealthBarBarAmount + "%";
-    alert("test")
+    //alert("test")
 }
 
 
@@ -1186,7 +1186,7 @@ function levelUpListener(){
 
         //location.replace("https://www.w3schools.com")
 
-        window.location.replace("https://dev81602.service-now.com/tf","_self")
+        //window.location.replace("https://dev81602.service-now.com/tf","_self")
 
     }
     
@@ -1205,7 +1205,7 @@ function trophyReturner (openedTrophy) {
         case 'trophy01':
             trophyInfo.trophy1 = true;
             document.getElementsByClassName('achievementIcon')[0].innerHTML = trophyTextArray[0]
-            alert("SAIT SAAVUTUKSEN!")
+            //alert("SAIT SAAVUTUKSEN!")
             openTrophy('trophy1');
             break;
         case trophy02:
