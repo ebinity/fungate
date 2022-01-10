@@ -1186,7 +1186,7 @@ function levelUpListener(){
 
         //location.replace("https://www.w3schools.com")
 
-        //window.location.replace("https://dev81602.service-now.com/tf","_self")
+        window.location.replace("https://dev81602.service-now.com/tf","_self")
 
     }
     
