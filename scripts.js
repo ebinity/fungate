@@ -1179,6 +1179,13 @@ function levelUpListener(){
     if (totalEnergy === 10){
         storyTeller(1);
     }
+
+    if (totalEnergy === 50){
+
+        //location.replace("https://www.w3schools.com")
+        window.location.replace("https://www.w3schools.com","_self")
+
+    }
     
 
 }
