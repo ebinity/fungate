@@ -1,0 +1,378 @@
+<html>
+    <head>
+        <link a href="styles.css" rel="stylesheet">
+        <script src="scripts.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+
+
+
+
+    </head>
+    <body onload="onLoad()">
+       <img src="Graphics/gameArea/space_background_design.jpg" class="bgImage">
+       <img src="Graphics/gameArea/space_background_design_close.png" class="bgImageClose">
+
+
+        
+            <div id="particles-js"></div>
+            <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+            <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+            <!-- partial -->
+            <script  src="spacescript.js"></script>
+
+         <!--<video playsinline autoplay muted loop poster="" id="bgvid"> -->
+            
+
+        </video>
+
+
+        <header>
+            <!--<img class="logo" src="Graphics/icons/logoSpaceClicker.png"> -->
+            <div id="headerBgP2">
+            </div>
+            <div id="headerBg">
+            </div>
+        <div id="particles-js"></div>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+            <img src="Graphics/gameArea/planets/Planet_Sun.png" class="glow" onClick="clickSun()" id="centerSun">
+                <img src="Graphics/gameArea/animations/hitmark2.gif" id="showClick" style="visibility: hidden" onClick="clickSun()">
+                <img src="Graphics/gameArea/animations/hitmark2.gif" id="showClick1" style="visibility: hidden" onClick="clickSun()">
+                <img src="Graphics/gameArea/animations/hitmark2.gif" id="showClick2" style="visibility: hidden" onClick="clickSun()">
+                <img src="Graphics/gameArea/animations/hitmark2.gif" id="showClick3" style="visibility: hidden" onClick="clickSun()">
+                <img src="Graphics/gameArea/animations/hitmark2.gif" id="showClick4" style="visibility: hidden" onClick="clickSun()">
+                <!--<div id="showClick" style="visibility: hidden">x</div>-->
+                <div id="headerBar"></div>
+
+                 <!--  
+                <div id="startGameNotification" style="visibility: visible;" onClick="hider('startGameNotification'), startGameSoundtrack()">
+                    <img src="Graphics/gameArea/misc/spaceHelmet.png" class="factSpaceHelmet">
+                    <p class="startGameText">Are you ready to start playing?</p>
+                </div>
+            -->        
+
+
+                    <!-- Mitä jos tekisin niin, että olisi yksi "startGame()" -->
+
+                    <!-- <button class="ohjeetPopupCloseButton" onClick='randomFacts(), deleter("notifications"), hider("notificationsPlacer")'>X</button> -->
+
+        
+                <div id="notificationsArea">
+                    <div id="notificationsPlacer">
+                                <button class="ohjeetPopupCloseButton" onClick='startGame()'>X</button>
+                            <img src="Graphics/gameArea/misc/spaceHelmet.png" class="factSpaceHelmet">
+                            <p class="startGameText">Are you ready to start playing? </p>
+                        </div>
+                    </div>
+                </div><!--NotificationsAreaEND -->
+
+
+
+        
+
+                <div id="storiesArea">
+                    <div id="storyPlacer" style="visibility: hidden;">
+
+                            <img src="Graphics/gameArea/misc/spaceHelmetEnemy.png" class="factSpaceHelmet">
+                            <p class="storyStatement">-</p>
+
+                            <div id="storyAnswers">
+                                <div id="firstAnswer" class="answerButto" onClick="storyContinuer('a')"><p class="answerA"></p></div>
+                                <div id="secondAnswer"class="answerButton" onClick="storyContinuer('b')"><p class="answerB"></p></div>
+                                <div id="thirdAnswer"class="answerButton" onClick="storyContinuer('c')"><p class="answerC"></p></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--NotificationsAreaEND-->
+
+
+
+<!--
+                <div id="randomFacts" style="visibility: hidden;" onClick="hider('randomFacts')">
+                    <img src="Graphics/gameArea/misc/spaceHelmet.png" class="factSpaceHelmet">
+                    <p class="randomFactText" id="changeFactText">Gravity moves the same speed as light. So if sun suddenly disappeared, with it's light lasting for 8 minutes, it's gravity would last also 8 minutes.</p>
+                </div>
+-->
+                <div id="ohjeetPopup" style="visibility: hidden;">
+
+                    <button class="ohjeetPopupCloseButton" onClick="hider('ohjeetPopup')">X</button>
+                    <div id="ohjeetText">
+                        <h2 class="ohjeetPopupTitle">Ohjeet</h2>
+                            <ul class="ohjeetPopUpText">
+                                <li>1) Kerää energiaa tähdistä klikkaamalla isointa aurinkotähteä.</li>
+                                <br>
+                                <li>2) Ostamalla päivityksiä nopeutat energian keräämistä.</li>
+                                <br>
+                                <li>3) Varo satunnaisia tähtien muutoksia! Ne tuhoavat hankittuja päivityksiä mikä hidastaa energian keräämistä.</li>
+                                <br>
+                                <li>4) Saatuasi tarpeeksi klikkauksia, pääset seuraavalla tasolle.</li>
+                                <br>
+                                <li>5) Pidä hauskaa, ja muista tallentaa peli!</li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div id="releaseNotes" style="visibility: hidden;">
+      
+                    <button class="ohjeetPopupCloseButton" onClick="hider('releaseNotes')">X</button>
+
+                        <div id="releaseText">
+                            <h2 class="ohjeetPopupTitle">Release Notes</h2>
+                                <ul class="ohjeetPopUpText">
+                                    <p>Last update:</p>
+                                    <li>-Added story arc (Still in progress.)</li>
+                                    <li>-Added economy health</li>
+                                    <li>-Added possible appearance of enemy</li>
+
+                                    <p>Update before:</p>
+                                    <li>-Graphic update!</li>
+                                    <li>-Added new space facts!</li>
+                                    <li>-Added soundtrack and play functions</li>
+                                    <li>-Fixed saving and loading.</li>
+                                    <li>-Added Level Progress visual and functionality</li>
+                                    <li>-Added achievements table (Functionality coming later)</li>
+                                </ul>
+                        </div>
+                </div>
+
+                <div id="trophyPopUpPlacer" style="visibility: hidden;">
+                    <button class="ohjeetPopupCloseButton" onClick='deleter("trophyPopUp"), hider("trophyPopUpPlacer")'>X</button>
+
+                    <div id="trophyPopUp">
+                </div> <!-- trophyPopUp END-->
+
+
+
+
+
+                <!--
+                <div id="trophyPopUp2" style="visibility: hidden;">
+                    <button class="ohjeetPopupCloseButton" onClick="hider('trophyPopUp2')">X</button>
+                    <h2 class="ohjeetPopupTitle trophyPopupTitle">Achievement: 2</h2>
+                        <img src="Graphics/gameArea/trophies/Neutron_quark.png" class="trophyRewardPic" >
+                            <div id="trophyPopUpContent">
+                                    <p class="trophyRewardPopUpText">As you reached the amount of over 100 total energy you learned that Neutron stars can spin 600 times per second.</p>
+                            </div><!--Trophy popupcontent END
+                </div> <!-- trophyPopUp END
+                -->
+
+
+        </header>
+
+
+        <div id="main">
+
+
+
+
+            <div id="gameArea">
+
+
+
+
+
+                <div id="planets">
+               
+                    <img id="rocket1" class="leijuvat">
+                    <img id="siirtokunta1" img src="Graphics/gameArea/rockets/ufo.png" class="leijuvat" >
+                    <img src="Graphics/gameArea/planets/animatedPlanets/planet01.gif" id="venus" class="leijuvat placeTest">
+                    <img  id="bluePlanet" class="leijuvat placeTest">
+                    <img src="Graphics/gameArea/planets/animatedPlanets/planet02.gif" id="Planet_02" class="leijuvat placeTest">
+                    <img  id="venus2" class="planetsForceRight">
+                
+                </div><!--planets END-->
+
+
+                
+
+            </div>
+
+
+
+            <div id="leftNav">
+                <br><br><br>
+                <div id="currentEnergy">
+                    <h2 class="currentEnergyText">Current Energy: </h2>
+                    <p id="currentEnergyNum">0</p>
+                    <img src="Graphics/icons/energyIcon.png" class="currentEnergyIcon">
+    
+                </div>
+                <br><br><br>
+                <div id="levelBar">
+                    <p class="levelProgressText">Level Progress:</p>
+                    <div id="levelBarAmount"></div>
+                </div>
+                <div id="spaceRocketBoostBar">
+                    <p class="levelProgressText">Boosts:</p>
+                    <div id="spaceRocketBoostBarAmount"></div>
+                </div>
+
+                <div id="economyHealthBar">
+                    <p class="levelProgressText">Economy Health:</p>
+                    <div id="economyHealthBarBarAmount"></div>
+                </div>
+
+                <br>
+
+                <div id="upgradesTitle">            
+                    <h2 class="TitleUpperCase">Upgrades</h2>
+                </div>
+    
+    
+                <div id="upgrades" >
+                    <div id="upgrade1" onClick="buyEnergiaSieppari()"  onmouseover="hoverSound()">
+                        <p class="otsikko">Energiasieppari</p>
+                            <div id="tooltip">
+                                <span class="tooltiptext">Paranna nykyistä rakettiasi, jotta keräät <br> kerralla enemmän energiaa!</span>
+                            </div>
+                        <img src="Graphics/icons/energyIcon.png" class="upgradesEnergyIcon">
+                        <p class="hinta upgrade1price">10</p>
+                    </div>
+                    <div id="upgrade2" onClick="buySpaceRocketBoost()"  onmouseover="hoverSound()">
+                        <p class="otsikko">Space Rocket Boost</p>
+                            <div id="tooltip">
+                                <span class="tooltiptext">Energiasieppari pörrää planeettojen ympärillä keräten automaattisesti energiaa.</span>
+                            </div>
+                        <img src="Graphics/icons/energyIcon.png" class="upgradesEnergyIcon">
+                        <p class="hinta upgrade2price">100</p>
+                    </div>
+                    <div id="upgrade3" onClick="buySpaceColony()"  onmouseover="hoverSound()">
+                        <p class="otsikko">Siirtokunta</p>
+                            <div id="tooltip">
+                                <span class="tooltiptext">Siirtokunnan avulla saat tuhansia uusia energiankerääjiä, 
+                                    jotka keräävät energiaa automaattisesti.
+                                    </span>
+                            </div>
+                        <img src="Graphics/icons/energyIcon.png" class="upgradesEnergyIcon">
+                        <p class="hinta upgrade3price">500</p>
+                    </div>
+                    <div id="upgrade4" onClick="buySpaceColony()" class="hiddenUpgrade"> 
+                        <p class="otsikko">?+.?3?9+??</p>
+                            <div id="tooltip">
+                                <span class="tooltiptext">Siirtokunnan avulla saat tuhansia uusia energiankerääjiä, 
+                                    jotka keräävät energiaa automaattisesti.
+                                    </span>
+                            </div>
+                        <img src="Graphics/icons/energyIcon.png" class="upgradesEnergyIcon">
+                        <p class="hinta">?+r??pp+?</p>
+                    </div>
+                    <div id="upgrade4" onClick="buySpaceColony()" class="hiddenUpgradeNext">
+                        <p class="otsikko">.?..?</p>
+                            <div id="tooltip">
+                                <span class="tooltiptext">Siirtokunnan avulla saat tuhansia uusia energiankerääjiä, 
+                                    jotka keräävät energiaa automaattisesti.
+                                    </span>
+                            </div>
+                        <img src="Graphics/icons/energyIcon.png" class="upgradesEnergyIcon">
+                        <p class="hinta">.x.q..</p>
+                    </div>
+
+
+                </div><!--Upgrades END-->
+                
+                <button class="saveGame ohjeet" onClick="showHiddenDiv('ohjeetPopup')">Ohjeet</button>
+                <br><br>
+                <button class="saveGame releaseNotes" onClick="showHiddenDiv('releaseNotes')">Release Notes</button>
+
+
+            </div>
+
+
+            <div id="rightNav">
+                <h2 class="TitleUpperCase">Stats</h2>
+                <div id="stats">
+                    <div id="statsBar">
+                        <p class="statsTitle">Boosteja käytössä:</p>
+                        <p id="boostejaYhteensa">0</p>
+                    </div>
+                    <div id="statsBar">
+                        <p class="statsTitle">Energiasieppareita:</p>
+                        <p id="autoKlikkereitaYhteensa">0</p>
+                    </div>
+                    <div id="statsBar">
+                        <p class="statsTitle">Siirtokuntia rakennettu:</p>
+                        <p id="totalColonnies">0</p>
+                    </div>
+                    <div id="statsBar">
+                        <p class="statsTitle">Kaikki kerätty energia:</p>
+                        <p id="totalEnergy">0</p>
+                    </div>
+                    <div id="statsBar">
+                        <p class="statsTitle">Kaikki todelliset klikit:</p>
+                        <p id="totalRealClicks">0</p>
+                    </div>
+
+                </div><!--stats END-->
+                <br>
+
+                <div id="achievements">
+                    <h2 class="TitleUpperCase">Achievements</h2>
+
+                    <table>
+                        <tbody>   
+                            <tr>             
+           
+                                <td class="achievementIcon" onmouseover="hoverSound()" onclick="openTrophy('trophy1')">?                                
+                                    <div id="trophyTip">
+                                        <span class="openedTrophyTipText">???<br>Trophy locked</span>
+                                    </div>   
+                                </td>
+                                <td class="achievementIcon" onmouseover="hoverSound()" onclick="openTrophy('trophy2')">?
+                                    <div id="trophyTip">
+                                        <span class="trophyTipText">???<br>Trophy locked</span>
+                                    </div>  
+                                </td>
+                                <td class="achievementIcon" onmouseover="hoverSound()" onclick="openTrophy('trophy3')">?
+                                    <div id="trophyTip">
+                                        <span class="trophyTipText">???<br>Trophy locked</span>
+                                    </div>  
+                                </td>
+                            </tr>
+                            <tr>                           
+                                <td class="achievementIcon" onmouseover="hoverSound()" onclick="openTrophy('trophy4')">?
+                                    <div id="trophyTip">
+                                        <span class="trophyTipText">???<br>Trophy locked</span>
+                                    </div>  
+                                </td>
+                                <td class="achievementIcon" onmouseover="hoverSound()" onclick="openTrophy('trophy5')">?
+                                    <div id="trophyTip">
+                                        <span class="trophyTipText">???<br>Trophy locked</span>
+                                    </div>  
+                                </td>
+                                <td class="achievementIcon" onmouseover="hoverSound()" onclick="openTrophy('trophy6')">?
+                                    <div id="trophyTip">
+                                        <span class="trophyTipText">???<br>Trophy locked</span>
+                                    </div>  
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            <div id="menuButtons">
+                <button class="saveGame" onClick="saveSession()" >Tallenna peli</button>
+                <button class="saveGame" onClick="loadSession()"  >Lataa</button>
+                <br><br>
+                <button class="saveGame" onClick="stopPlayMusic()" id="audioPlayerControls" >Stop Music</button>
+            </div>
+            <br>
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+    
+</body>
+</html>

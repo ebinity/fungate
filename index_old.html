@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <link a href="styles.css" rel="stylesheet">
+        <script src="scripts.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+
+    </head>
+    <body onload="onLoad(), randomFacts()">
+        <video playsinline autoplay muted loop poster="" id="bgvid">
+            <source src="Graphics/videos/background_test1.mp4" type="video/mp4">
+        </video>
+
+
+
+        <header>
+                <img class="logo" src="Graphics/icons/logoSpaceClicker.png">
+        </header>
+
+
+        <div id="leftNav">
+            <br><br><br>
+            <div id="currentEnergy">
+                <h2 class="currentEnergyText">Current Energy: </h2>
+                <p id="currentEnergyNum">0</p>
+                <img src="Graphics/icons/energyIcon.png" class="currentEnergyIcon">
+
+            </div>
+            <br><br><br><br>
+
+            <div id="upgradesTitle">            
+                <h2>Upgrades</h2>
+            </div>
+
+
+            <div id="upgrades">
+                <div id="upgrade1" onClick="buySpaceRocketBoost()">
+                    <p class="otsikko">Space Rocket Boost</p>
+                        <div id="tooltip">
+                            <span class="tooltiptext">Paranna nykyistä rakettiasi, jotta keräät <br> kerralla enemmän energiaa!</span>
+                        </div>
+                    <img src="Graphics/icons/energyIcon.png" class="upgradesEnergyIcon">
+                    <p class="hinta">100</p>
+                </div>
+                <div id="upgrade2" onClick="buyEnergiaSieppari()">
+                    <p class="otsikko">Energiasieppari</p>
+                        <div id="tooltip">
+                            <span class="tooltiptext">Energiasieppari pörrää planeettojen ympärillä keräten automaattisesti energiaa.</span>
+                        </div>
+                    <img src="Graphics/icons/energyIcon.png" class="upgradesEnergyIcon">
+                    <p class="hinta">1000</p>
+                </div>
+                <div id="upgrade3" onClick="buySpaceColony()">
+                    <p class="otsikko">Siirtokunta</p>
+                        <div id="tooltip">
+                            <span class="tooltiptext">Siirtokunnan avulla saat tuhansia uusia energiankerääjiä, 
+                                jotka keräävät energiaa automaattisesti.
+                                </span>
+                        </div>
+                    <img src="Graphics/icons/energyIcon.png" class="upgradesEnergyIcon">
+                    <p class="hinta">10000</p>
+                </div>
+            </div>
+        </div> <!--leftNav END-->
+
+        <div id="rightNav">
+
+            <h2>Stats</h2>
+            <div id="stats">
+                <div id="statsBar">
+                    <p class="statsTitle">Boosteja käytössä:</p>
+                    <p id="boostejaYhteensa">0</p>
+                </div>
+                <div id="statsBar">
+                    <p class="statsTitle">Energiasieppareita käytössä:</p>
+                    <p id="autoKlikkereitaYhteensa">0</p>
+                </div>
+                <div id="statsBar">
+                    <p class="statsTitle">Klikkien kokonaismäärä:</p>
+                    <p id="totalClicks">0</p>
+                </div>
+                <div id="statsBar">
+                    <p class="statsTitle">Siirtokuntia rakennettu:</p>
+                    <p id="totalColonnies">0</p>
+                </div>
+
+            </div><!--stats END-->
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <button onClick="saveSession()">Tallenna peli</button>
+            <button onClick="loadSession()">Lataa</button>
+
+
+            <div id="audio"> 
+                <p class="taustamusiikkia">Taustamusiikkia:</p>
+                <audio controls>
+                <source src="Music/Mars_Instrumental.mp3" type="audio/mpeg" controls autoplay>
+              Your browser does not support the audio element.
+                </audio>
+            </div><!--Audio end-->
+    
+        </div> <!--rightNav END-->
+
+
+
+
+
+
+
+        <div id="gameArea">
+
+            <div id="leftPlaceHolder"></div>
+
+            <div id="test2">
+
+
+
+                <div id="renderArea">
+
+
+
+                </div>
+
+                <div id="randomFacts" style="visibility: hidden">
+                    <p>Did you know that space <br> is completely silent!</p>
+                </div>
+
+                <div id="test">        
+                    <div id="showClick" style="visibility: hidden">
+                    
+                        
+                    </div>
+                    <img src="Graphics/gameArea/centerSun.png" onClick="clickSun()" id="centerSun">
+                </div><!--test end-->
+    
+                <div id="planets">
+               
+                    <img id="rocket1" class="planetsForceLeft">
+                    <img id="siirtokunta1" class="planetsForceRight" >
+                    <img src="Graphics/gameArea/planets/venus-transparent.png" id="venus" class="planetsForceLeft">
+                    <img  id="venus2" class="planetsForceRight">
+                
+                </div><!--planets END-->
+
+            </div><!--test2 END-->
+
+            <div id="rightPlaceHolder"></div>
+
+        </div><!--gameArea END-->
+
+
+
+
+
+
+
+        <footer>
+
+        </footer>
+</body>
+</html>

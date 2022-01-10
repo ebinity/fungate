@@ -1,0 +1,353 @@
+html {
+    color:white;
+    margin:auto;
+
+
+}
+body {
+    background-color:black;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    /**background-image:url("Graphics/gameArea/background.jpg");**/
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow:hidden;
+}
+
+video{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:-1;
+}
+
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size:15px;
+    letter-spacing: 2;
+}
+
+/** HEADER ALUEEN SÄÄDÖT **/
+/** HEADER ALUEEN SÄÄDÖT **/
+/** HEADER ALUEEN SÄÄDÖT **/
+header{
+    background-color:black;
+    height:80px;
+    text-align:center;
+    box-shadow: 0px 0px 100px 10px rgb(132, 0, 255, 0.8);
+    z-index: 50;
+
+}
+.logo{
+    margin-top:-30px;
+    width:550px;
+}
+
+
+/** HEADER ALUE END **/
+/** HEADER ALUE END **/
+/** HEADER ALUE END **/
+
+
+
+/** UPGRADES LEFT ALUEEN SÄÄDÖT **/
+/** UPGRADES LEFT ALUEEN SÄÄDÖT **/
+/** UPGRADES LEFT ALUEEN SÄÄDÖT **/
+
+#leftNav {
+    text-align:center;
+    width:300px;
+    background-color:rgba(12, 48, 120, 0.70);
+    height:100%;
+    float:left;
+    z-index:1;
+}
+
+#upgrade1, #upgrade2, #upgrade3{
+    text-align:left;
+
+    height:50px;
+    background-color:green;
+    background-image: linear-gradient(rgb(19, 47, 99), rgb(25, 69, 141));
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+#upgrade1, #upgrade2, #upgrade3, #upgradesTitle{
+    border:solid #CCC;
+    border-width: 1px 0px 1px 0px;
+    vertical-align:middle;
+    margin-top:15px;
+}
+
+#upgradesTitle {
+    border:solid #CCC;
+    border-width: 1px 0px 1px 0px;
+    vertical-align:middle;
+    margin-top:15px;
+
+}
+#upgrade1:hover, #upgrade2:hover, #upgrade3:hover{
+    background-image: linear-gradient(rgb(19, 47, 99), rgb(15, 55, 117));
+}
+
+#upgrades p, #upgrades button{
+    margin-left:20px;
+}
+
+#currentEnergy{
+
+    width:max;
+    height:50px;
+}
+.currentEnergyText{
+    float:left;
+    width:200px;
+    margin-top:17px;
+    text-transform: uppercase;
+
+}
+.currentEnergyIcon {
+    float:left;
+
+}
+#currentEnergyNum{
+    float:left;
+    width:40px;
+    font-weight: bold;
+    color:ffa800;
+}
+
+.upgradesEnergyIcon{
+    margin-top:-22px;
+    margin-left:20px;
+    position:absolute;
+    width:40px;
+}
+#upgrades p.otsikko{
+     margin-top:0px;
+
+}
+#upgrades p.hinta{
+    margin-top:-13px;
+    margin-left:65px;
+}
+
+
+/**TOOLTIPPI START**/
+
+#tooltip .tooltiptext {
+    visibility: hidden;
+    width: 390px;
+    height: 40px;
+    margin-left:200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    font-size:14px;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+#upgrade1:hover .tooltiptext, #upgrade2:hover .tooltiptext, #upgrade3:hover .tooltiptext{
+    visibility: visible;
+}
+
+
+/**TOOLTIPPI END**/
+
+/** UPGRADES LEFT ALUE END **/
+/** UPGRADES LEFT ALUE END **/
+/** UPGRADES LEFT ALUE END **/
+
+
+
+
+
+/** STATS RIGHT ALUEEN SÄÄDÖT **/
+/** STATS RIGHT ALUEEN SÄÄDÖT **/
+/** STATS RIGHT ALUEEN SÄÄDÖT **/
+
+
+
+#rightNav {
+    text-align:center;
+    background-color:rgba(12, 48, 120, 0.70);
+    height:100%;
+    float:right;
+    z-index:100;
+}
+#stats{
+    background-image: linear-gradient(rgb(19, 47, 99), rgb(25, 69, 141));
+    height:205px;
+    width:250px;
+    margin-left:25px;
+    text-align:left;
+    
+}
+
+#statsBar{
+    border-bottom: 1px solid white;
+    height:50px;
+}
+.statsTitle{
+    width:200px;
+    float:left;
+
+}
+#boostejaYhteensa, #autoKlikkereitaYhteensa, #totalClicks, #totalColonnies{
+    margin-left:10px;
+   width:30px;  
+    float:left;
+}
+
+/** STATS RIGHT ALUE END **/
+/** STATS RIGHT ALUE END **/
+/** STATS RIGHT ALUE END **/
+
+
+
+/** GAME ALUE ALUEEN SÄÄDÖT **/
+/** GAME ALUE ALUEEN SÄÄDÖT **/
+/** GAME ALUE ALUEEN SÄÄDÖT **/
+
+
+
+#gameArea{
+    text-align:unset !important;
+    background-color:rgba(255, 0, 0, 0.426);
+    z-index: 10;
+    height:400px;
+
+}
+
+
+
+#leftPlaceHolder{
+
+    width:15%;
+    height:100%;
+
+    float:left;
+
+}
+#rightPlaceHolder{
+ 
+    width:15%;
+    height:100%;
+
+    float:right;
+
+}
+
+#test2{
+    
+    height:700px;
+    width:69%;
+    float:left;
+
+}
+
+
+
+/**  TÄMÄ SÄÄTÄÄ KAIKKI PLANEETAT IRRALLEEN TOISISTAAN **/
+#planets img{
+    z-index:-1;
+    position:absolute;
+}
+
+/**  TÄMÄ SÄÄTÄÄ PLANEETAT JOKO VASEMMALLE TAI OIKEALLE SIVULLE TOISISTAAN **/
+.planetsForceLeft{
+    left:0px;
+}
+.planetsForceRight{
+    right:0px;
+}
+
+#centerSun{
+    z-index:10;
+    position:fixed;
+    margin-left:-270px;
+    user-select: none;
+    
+}
+#venus{
+    margin-left:400px;
+}
+
+#venus2{
+    margin-right:400px;
+}
+
+
+#rocket1 {
+    width:80px;
+    margin-left:500px;
+    margin-top:400px;
+    
+}
+
+#siirtokunta1{
+    width:150px;
+    margin-right:500px;
+    margin-top:400px;  
+}
+
+img:not([src]) {
+    visibility: hidden;
+ }
+
+#randomFacts{
+    background-image: linear-gradient(rgb(19, 47, 99), rgb(25, 69, 141));
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    width:300px;
+    position:fixed;
+    text-align:center;
+    margin-left:820px;
+    margin-top:500px;
+}
+
+
+
+#renderArea{
+    width:1320px;
+    height:850px;
+    position:absolute;
+    margin-left:300px;
+
+}
+
+.placedText{
+    position:absolute;
+
+}
+
+
+/** GAME AREA RIGHT ALUE END **/
+/** GAME AREA RIGHT ALUE END **/
+/** GAME AREA RIGHT ALUE END **/
+
+
+.staticClickNumber{
+    z-index:50;
+    position:fixed;
+    margin-left:950px;
+    margin-top:140px;
+
+}
+#showClick{
+    position:fixed;
+    color:black;
+    font-weight: bolder;
+    font-size:40;
+    width:50px;
+    z-index:15;
+    user-select: none;
+}
